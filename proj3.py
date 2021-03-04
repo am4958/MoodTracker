@@ -9,7 +9,9 @@ sock.connect((UDP_IP, SHARED_UDP_PORT))
 numofmoods = 0
 moodhist = []
 colors = []
-print("Please enter your mood on a scale from 1-9") #fix for 10
+
+##initial message
+print("Please enter your mood on a scale from 1-9") 
 def loop():
 >-------while True:
 >------->-------data = sock.recv(2048)
@@ -19,7 +21,7 @@ def loop():
 >------->------->-------organizedFunc(moodnum)
 
 
-
+##repreats for each round of score
 def myFirstFunc():
 >-------print("Please enter your mood on a scale from 1 - 9")
 >-------print(" ")
@@ -60,8 +62,6 @@ def moodchart(moodhist):
 >------->-------plt.ylabel('Mood Score')
 >------->-------plt.xlabel('Hour')
 >------->-------plt.title('Your Mood Chart')
->------->-------figManager = plt.get_current_fig_manager()## make plot full screen
->------->-------figManager.full_screen_toggle()
 >------->-------plt.show(block=False)
 >------->-------plt.pause(10)
 >------->-------numofmoods = 0
