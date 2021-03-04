@@ -11,7 +11,6 @@ def loop():
 >-------while True:
 >------->-------data = sock.recv(2048)
 >------->-------print(data)
-
 >------->-------moodnum = [int(s) for s in data.split() if s.isdigit()]
 >------->-------if moodnum:
 >------->------->-------organizedFunc(moodnum)
@@ -22,16 +21,36 @@ def myFirstFunc():
 
 def organizedFunc(moodnum):
 >-------global numofmoods
->-------curmood.append( moodnum)
->-------print(curmood)
->-------print("Your current mood is stored as: " + str(curmood[numofmoods]))
+>-------moodhist.append( moodnum[0])
+>-------print("Your current mood is stored as: " + str(moodhist[numofmoods]))
 >-------numofmoods +=1
 >-------print(numofmoods)
->-------if numofmoods >4:
->------->-------print("Here is your mood chart")
->------->-------for num in curmood:
->------->------->-------print(num)
+>-------toosad(moodhist)
+>-------moodchart(moodhist)
 >-------myFirstFunc()
+
+def toosad(moodhist):
+>-------lastnum = numofmoods-1
+>-------if moodhist[lastnum] < 5:
+>------->-------print("You okay bud?")
+
+def moodchart(moodhist):
+>-------global numofmoods
+>-------if numofmoods > 2:
+>------->-------print(moodhist)
+>------->-------hours = ('0', '1', '2')
+>------->-------y_pos = np.arange(len(hours))
+>------->-------plt.bar(y_pos, moodhist, align='center', alpha=0.5)
+>------->-------plt.xticks(y_pos, hours)
+>------->-------plt.ylabel('mood')
+>------->-------plt.xlabel('hours')
+>------->-------plt.title('Your Mood Chart')
+>------->-------plt.show(block=False)
+>------->-------plt.pause(3)
+>------->-------numofmoods = 0
+>------->-------moodhist.clear()
+>------->-------plt.close()
+
 
 
 
@@ -39,3 +58,4 @@ def organizedFunc(moodnum):
 if __name__ == "__main__":
 >-------sock.send('Hello ESP32'.encode())
 >-------loop()
+
