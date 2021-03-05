@@ -1,4 +1,3 @@
-![IMG_5708](https://user-images.githubusercontent.com/46966950/110150385-37911000-7dad-11eb-8be2-dde70736b0fc.jpg)
 # CreativeEmbeddedSystemsProj3
 
 Description: This is a program for a wireless mood tracker that takes in data from a keypad connected to the esp32 and transmits that input via wifi to a laptop or other computer. 
@@ -41,3 +40,4 @@ Enclosure:
 
 ![IMG_5693](https://user-images.githubusercontent.com/46966950/110135597-b16ccd80-7d9c-11eb-83e5-527cd9f817da.jpg)
 ![IMG_5692](https://user-images.githubusercontent.com/46966950/110135719-d7926d80-7d9c-11eb-90b5-db27fadd6d34.jpg)
+![IMG_5708](https://user-images.githubusercontent.com/46966950/110150385-37911000-7dad-11eb-8be2-dde70736b0fc.jpg)
