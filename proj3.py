@@ -2,15 +2,13 @@ import socket
 import matplotlib.pyplot as plt; plt.rcdefaults()
 import numpy as np
 import matplotlib.pyplot as plt
-UDP_IP = "192.168.1.172" 
+UDP_IP = "192.168.1.172" # The IP that is printed in the serial monitor from the ESP32
 SHARED_UDP_PORT = 4210
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)  # Internet  # UDP
 sock.connect((UDP_IP, SHARED_UDP_PORT))
 numofmoods = 0
 moodhist = []
 colors = []
-
-##initial message
 print("Please enter your mood on a scale from 1-9") 
 def loop():
 >-------while True:
@@ -21,7 +19,7 @@ def loop():
 >------->------->-------organizedFunc(moodnum)
 
 
-##repreats for each round of score
+
 def myFirstFunc():
 >-------print("Please enter your mood on a scale from 1 - 9")
 >-------print(" ")
@@ -55,7 +53,7 @@ def moodchart(moodhist):
 >------->-------barcolors(moodhist)
 >------->-------avgmood(moodhist)
 #>------>-------print(moodhist)
->------->-------hours = ('0', '1', '2', '3', '4','5','6', '7', '8', '9')
+>------->-------hours = ('0', '1', '2', '3', '4','5','6','7','8','9')
 >------->-------y_pos = np.arange(len(hours))
 >------->-------plt.bar(y_pos, moodhist, align='center', alpha=0.5, color = colors)
 >------->-------plt.xticks(y_pos, hours)
@@ -66,6 +64,7 @@ def moodchart(moodhist):
 >------->-------plt.pause(10)
 >------->-------numofmoods = 0
 >------->-------moodhist.clear()
+>------->-------colors.clear()
 >------->-------plt.close()
 
 ##prints avg mood for the day
@@ -75,7 +74,7 @@ def avgmood(moodhist):
 >-------for mood in moodhist:
 >------->-------total += mood
 >-------avgmood = total/len(moodhist)
->-------print ("Your average mood is: "+ str( avgmood))#CHANGE IF CHANGE NUM OF MOODS IN CHART
+>-------print ("Your average mood is: "+ str( avgmood))
 >-------if avgmood < 5:
 >------->-------print("checking in on you dude, maybe you should phone a friend")
 
@@ -84,11 +83,11 @@ def avgmood(moodhist):
 def barcolors(moodhist):
 >-------global colors
 >-------for mood in moodhist:
->------->-------if mood > 6:
+>------->-------if mood >= 6:
 >------->------->-------colors.append("green")
->------->-------if mood > 3:
+>------->-------if mood >= 3 and mood <6:
 >------->------->-------colors.append("orange")
->------->-------else:
+>------->-------if mood >=1 and mood <3 :
 >------->------->-------colors.append("red")
 
 if __name__ == "__main__":
