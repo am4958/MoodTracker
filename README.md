@@ -2,7 +2,7 @@
 
 Description: This is a program for a wireless mood tracker that takes in data from a keypad connected to the esp32 and transmits that input via wifi to a laptop or other computer. 
 
-Video Link:
+Video Link: https://youtu.be/wA5RdLNo6S4
 
 Hardware Required:
   -esp32
@@ -32,10 +32,11 @@ How To:
 
 
 
+Enclosure:
+  The enclosure is an old keyboard box painted over and decorated. I used an exacto knife to cut a hole for the heypad
+ and stacked small books inside to prop it up so that it was easy to press!
 
-
-
-
+![IMG_5706](https://user-images.githubusercontent.com/46966950/110146560-b6d01500-7da8-11eb-9fda-7ecd588e9ea8.jpg)
 
 ![IMG_5693](https://user-images.githubusercontent.com/46966950/110135597-b16ccd80-7d9c-11eb-83e5-527cd9f817da.jpg)
 ![IMG_5692](https://user-images.githubusercontent.com/46966950/110135719-d7926d80-7d9c-11eb-90b5-db27fadd6d34.jpg)
