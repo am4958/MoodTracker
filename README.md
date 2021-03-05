@@ -1,6 +1,6 @@
 # CreativeEmbeddedSystemsProj3
 
-Description: This is a program for a wireless mood tracker that takes in data from a keyboard connected to the esp32 and transmits that input via wifi to a laptop or other computer. 
+Description: This is a program for a wireless mood tracker that takes in data from a keypad connected to the esp32 and transmits that input via wifi to a laptop or other computer. 
 
 Video Link:
 
