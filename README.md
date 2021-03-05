@@ -2,7 +2,7 @@
 
 Description: This is a program for a wireless mood tracker that takes in data from a keypad connected to the esp32 and transmits that input via wifi to a laptop or other computer. 
 
-Video Link: https://youtu.be/wA5RdLNo6S4
+Video Link: https://youtu.be/j6JdFV1zxEE
 
 Hardware Required:
   -esp32
