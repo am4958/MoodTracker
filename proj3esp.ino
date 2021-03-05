@@ -65,8 +65,6 @@ void loop()
    if (keyPressed) {
     Udp.print(keyPressed);
   }
-  // Just test touch pin - Touch0 is T0 which is on GPIO 4.
-//  Udp.printf(String(touchRead(T0)).c_str(),2);
   Udp.endPacket();
   delay(1000);
 }
