@@ -3,8 +3,8 @@
 #include <WiFiUdp.h>
 #include <Keypad.h>
 //set up to connect to an existing network (e.g. mobile hotspot from laptop that will run the python code)
-const char* ssid = "APlaceToDequeue";
-const char* password = "elsebeer++";
+const char* ssid = "WIFNAME";
+const char* password = "WIFIPASSWORD";
 WiFiUDP Udp;
 unsigned int localUdpPort = 4210;  //  port to listen on
 char incomingPacket[255];  // buffer for incoming packets
